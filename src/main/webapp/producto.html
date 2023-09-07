@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="icon" href="./others/icons/producto.png" type="image/png" />
+        <title>Gesti&oacute;n Productos</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    
+        <div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            <h1>Gesti&oacute;n Producto</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Men&uacute;:</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="contacto.html">Gest. Cliente</a>
+                    <a class="nav-link active" href="venta.html">Gest. Ventas</a>
+                    <a class="nav-link active" href="consulta.html">Consultas</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="card-body">
+            <form id="frm">
+                <div class="form-row">
+                    <div class="form-group col-12 col-sm">
+                        <label for="idProduct">Identificaci&oacute;n</label>
+                        <input type="text" id="idProduct" class="form-control col" placeholder="Ingrese la Identificación"  onkeypress="return onlyNums(event)" required>
+                    </div>
+
+                    <div class="form-group col-12 col-sm">
+                        <label for="name">Nombre de Producto</label>
+                        <input type="text" id="name" class="form-control col"  placeholder="Ingrese el nombre del producto" required disabled>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-12 col-sm">
+                        <label for="cost">Valor de Producto</label>
+                        <input type="number" id="cost" class="form-control col"  min="1" max="10000000" placeholder="1 - 10000000" required disabled>
+                    </div>
+                    <div class="form-group col-12 col-sm">
+                        <label for="txtDesc">Descripci&oacute;n del Producto</label>
+                        <textarea class="form-control" id="txtDesc" rows="3" disabled></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnAdd" style="BACKGROUND-COLOR: rgb(0,0,0)" class="btn btn-secondary col" onclick="addProduct()">Agregar</button>
+                    </div>
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnDelete" class="btn btn-primary form-control" onclick="borrar_producto()">Eliminar</button>
+                    </div>
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnSearch" style="BACKGROUND-COLOR: rgb(0,0,0)" class="btn btn-secondary col" onclick="consultar_producto()">Buscar</button>
+                    </div>
+
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnSave" class="btn btn-primary form-control" onclick="agregar_producto()" disabled>Guardar</button>
+                    </div>
+
+                    <div class="form-group col col-sm">
+                        <button type="reset" id="btnCancel" style="BACKGROUND-COLOR: rgb(0,0,0)" class="btn btn-secondary col" onclick="cancelProduct()" disabled>Cancelar</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+        
+    <script src="js/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prodcuto.js"></script>
+    </body>
+
+</html>

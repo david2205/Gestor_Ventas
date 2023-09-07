@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="icon" href="./others/icons/cliente.png" type="image/png" />
+        <title>Gesti&oacute;n Clientes</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            <h1>Gesti&oacute;n Cliente</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Men&uacute;:</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="venta.html">Gest. Ventas</a>
+                    <a class="nav-link active" href="producto.html">Gest. Producto</a>
+                    <a class="nav-link active" href="consulta.html">Consultas</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="card-body">
+            <form id="frm">
+                <div class="form-row">
+                    <div class="form-group col-12 col-sm">
+                        <label for="idClient">Identificaci&oacute;n</label>
+                        <input type="text" id="idClient" class="form-control col" placeholder="Ingrese la Identificación"  onkeypress="return onlyNums(event)" required>
+                    </div>
+
+                    <div class="form-group col-12 col-sm">
+                        <label for="names">Nombres</label>
+                        <input type="text" id="names" class="form-control col"  placeholder="Ingrese los Nombres" onkeypress="return onlyAlpha(event)" required disabled>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-12 col-sm">
+                        <label for="lastName">Apellidos</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Ingrese los Apellidos" onkeypress="return onlyAlpha(event)" required disabled>
+                    </div>
+                    <div class="form-group col-12 col-sm">
+                        <label for="edad">Edad</label>
+                        <input type="text" id="edad" class="form-control" placeholder="Ingrese la Edad" onkeypress="return onlyNums(event)" required disabled>
+                    </div>
+                    <div class="form-group col-12 col-sm">
+                        <label for="contacto">Celular</label>
+                        <input type="text" id="contacto" class="form-control" placeholder="Ingrese el Celular" onkeypress="return onlyNums(event)" required disabled>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnAdd" style="BACKGROUND-COLOR: rgb(0,0,0)" class="btn btn-secondary col" onclick="addClient()">Agregar</button>
+                    </div>
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnDelete" class="btn btn-primary form-control" onclick="borrar_cliente()">Eliminar</button>
+                    </div>
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnSearch" style="BACKGROUND-COLOR: rgb(0,0,0)" class="btn btn-secondary col" onclick="consultar_cliente()">Buscar</button>
+                    </div>
+
+                    <div class="form-group col col-sm">
+                        <button type="button" id="btnSave" class="btn btn-primary form-control" onclick="agregar_cliente()" disabled>Guardar</button>
+                    </div>
+
+                    <div class="form-group col col-sm">
+                        <button type="reset" id="btnCancel" style="BACKGROUND-COLOR: rgb(0,0,0)" class="btn btn-secondary col" onclick="cancelClient()" disabled>Cancelar</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+    <script src="js/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cliente.js"></script>
+        
+    </body>
+</html>

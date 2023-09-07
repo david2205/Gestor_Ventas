@@ -1,0 +1,11 @@
+com\uptc\trabajo\resources\JavaEE8Resource.class
+com\uptc\modelo\management.class
+com\uptc\trabajo\JAXRSConfiguration.class
+com\uptc\persistencia\productoDAO.class
+com\uptc\modelo\venta.class
+com\uptc\persistencia\clienteDAO.class
+com\uptc\modelo\cliente.class
+com\uptc\modelo\producto.class
+com\uptc\persistencia\conexion_DB.class
+com\uptc\persistencia\ventaDAO.class
+com\uptc\servlets\control_producto.class

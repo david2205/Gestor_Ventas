@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Consultar</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./others/icons/consulta.png" type="image/png" />
+</head>
+<body>
+<div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            <h1>Consultas<h6>Clientes, Productos, Ventas.</h6></h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Men&uacute;:</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="contacto.html">Gest. Cliente</a>
+                    <a class="nav-link active" href="producto.html">Gest. Producto</a>
+                    <a class="nav-link active" href="venta.html">Gest. Ventas</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="card-body">
+            <form id="frm">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="option">Men&uacute; de opciones</label>
+                        <select id="option" class="form-control" onchange="viewTable()">
+                            <option>Seleccione...</option>
+                            <option>Clientes Registrados</option>
+                            <option>Productos Registrados</option>
+                            <option>Ventas Registradas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="table-responsive" id="tblClient" style="display:none">
+                        <table class="table table-striped">
+                            <thead>
+                            <th>Id Cliente</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Contacto</th>
+                            <th>Edad</th>
+                            </thead>
+                            <tbody id="tableClient" >
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive" id="tblProd" style="display:none">
+                        <table class="table table-striped">
+                            <thead>
+                            <th>Id Producto</th>
+                            <th>Nombre Producto</th>
+                            <th>Valor Producto</th>
+                            <th>Descripci&oacute;n</th>
+                            </thead>
+                            <tbody id="tableProduct">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive" id="tblVenta" style="display:none">
+                        <table class="table table-striped">
+                            <thead>
+                            <th>Id Venta</th>
+                            <th>Id Cliente</th>
+                            <th>Id Producto</th>
+                            <th>Cantidad</th>
+                            <th>Valor Venta</th>
+                            </thead>
+                            <tbody id="tableVentas">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+        
+        
+    <script src="js/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/consulta.js"></script>
+
+    </body>
+</html>
